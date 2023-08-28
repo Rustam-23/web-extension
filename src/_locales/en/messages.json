@@ -1,0 +1,10 @@
+﻿{
+  "name": {
+    "message": "Web-ext",
+    "description": "extension name"
+  },
+  "description": {
+    "message": "Copy from stackoverflow",
+    "description": "extension description"
+  }
+}

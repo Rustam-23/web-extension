@@ -1,0 +1,33 @@
+﻿{
+  "name": "__MSG_name__",
+  "version": "1.0",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/*"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["https://stackoverflow.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["content-script.css", "execute.js", "background.js"],
+      "matches": ["https://stackoverflow.com/*"]
+    }
+  ],
+  "commands": {
+    "copy-all": {
+      "suggested_key": {
+        "default": "Alt+Shift+C"
+      },
+      "description": "Copy all text"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
